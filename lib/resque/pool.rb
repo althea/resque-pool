@@ -107,11 +107,7 @@ module Resque
     end
 
     def environment
-      if defined? RAILS_ENV
-        RAILS_ENV
-      else
-        ENV['RACK_ENV'] || ENV['RAILS_ENV'] || ENV['RESQUE_ENV']
-      end
+      ENV['RESQUE_ENV']
     end
 
     # }}}
